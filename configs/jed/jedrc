@@ -1,0 +1,11 @@
+enable_top_status_line (0);
+() = evalfile("emacs");
+
+LINENUMBERS = 2; 
+TAB_DEFAULT = 4;
+USE_TABS = 0;
+No_Backups = 1;
+
+ADD_NEWLINE=1;
+
+setkey ("backward_delete_char_untabify", "^H");
