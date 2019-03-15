@@ -7,9 +7,8 @@ alias tree 'tree -Csuh'
 set -x EDITOR "code"
 
 set -x PATH "$HOME/bin" $PATH
-set -x PATH /anaconda3/bin $PATH
 
-set -x GOOGLE_CLOUD_SDK $HOME/google-cloud-sdk
+set -x GOOGLE_CLOUD_SDK $HOME/bin/google-cloud-sdk
 set -x PATH $GOOGLE_CLOUD_SDK/bin $PATH
 set -x PATH $GOOGLE_CLOUD_SDK/platform/google_appengine $PATH
 set -x CLOUDSDK_PYTHON "/usr/bin/python2.7"
@@ -22,6 +21,8 @@ set -x GOROOT $GOROOT ""
 set -x GOPATH $GOPATH "$HOME/go"
 
 set -x PYTHONPATH $PYTHONPATH ""
+set -g CONDA_ROOT "/anaconda3"
+set -x PATH "$CONDA_ROOT/bin" $PATH
 
 source /anaconda3/etc/fish/conf.d/conda.fish 
 
