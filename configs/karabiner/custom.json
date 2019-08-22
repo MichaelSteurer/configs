@@ -78,14 +78,14 @@
             "manipulators": [
                 {
                     "conditions": [
-                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."], "type": "frontmost_application_unless"}
+                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"], "type": "frontmost_application_unless"}
                     ],
                     "from": {"key_code": "v", "modifiers": {"mandatory": ["control"], "optional": ["caps_lock", "shift"]}},
                     "to": [{"key_code": "page_down"}],
                     "type": "basic"
                 }, {
                     "conditions": [
-                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."], "type": "frontmost_application_unless"}
+                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"], "type": "frontmost_application_unless"}
                     ],
                     "from": {"key_code": "v", "modifiers": {"mandatory": ["option"], "optional": ["caps_lock", "shift"]}},
                     "to": [{"key_code": "page_up"}],
@@ -97,7 +97,7 @@
             "manipulators": [
                 {
                     "conditions": [
-                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."]},
+                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"]},
                         {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
                         {"type": "variable_if", "name": "emacs_mode_markset", "value": 0}
                     ],
@@ -106,7 +106,7 @@
                     "type": "basic"
                 }, {
                     "conditions": [
-                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."]},
+                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"]},
                         {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
                         {"type": "variable_if", "name": "emacs_mode_markset", "value": 0}
                     ],
@@ -115,7 +115,7 @@
                     "type": "basic"
                 }, {
                     "conditions": [
-                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."]},
+                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"]},
                         {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
                         {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
                     ],
@@ -124,7 +124,7 @@
                     "type": "basic"
                 }, {
                     "conditions": [
-                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."]},
+                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"]},
                         {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
                         {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
                     ],
@@ -138,28 +138,28 @@
             "manipulators": [
                 {
                     "conditions": [
-                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."], "type": "frontmost_application_unless"}
+                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"], "type": "frontmost_application_unless"}
                     ],
                     "from": {"key_code": "d", "modifiers": {"mandatory": ["control"], "optional": ["caps_lock", "option"]}},
                     "to": [{"key_code": "delete_forward"}],
                     "type": "basic"
                 }, {
                     "conditions": [
-                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."], "type": "frontmost_application_unless"}
+                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"], "type": "frontmost_application_unless"}
                     ],
                     "from": {"key_code": "d", "modifiers": {"mandatory": ["option"], "optional": ["caps_lock"]}},
                     "to": [{"key_code": "delete_forward", "modifiers": ["left_option"]}],
                     "type": "basic"
                 }, {
                     "conditions": [
-                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."], "type": "frontmost_application_unless"}
+                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"], "type": "frontmost_application_unless"}
                     ],
                     "from": {"key_code": "h", "modifiers": {"mandatory": ["control"], "optional": ["caps_lock", "option"]}},
                     "to": [{"key_code": "delete_or_backspace"}],
                     "type": "basic"
                 }, {
                     "conditions": [
-                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim."], "type": "frontmost_application_unless"}
+                        {"bundle_identifiers": ["^com.apple.Terminal$", "^com.googlecode.iterm2$", "^org.vim.", "^com.microsoft.VSCode$"], "type": "frontmost_application_unless"}
                     ],
                     "from": {"key_code": "h", "modifiers": {"mandatory": ["option"], "optional": ["caps_lock"]}},
                     "to": [{"key_code": "delete_or_backspace", "modifiers": ["left_option"]}],
