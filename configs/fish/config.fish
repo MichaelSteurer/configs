@@ -5,6 +5,7 @@ alias ll 'ls -l'
 alias tree 'tree -Csuh'
 
 set -x EDITOR "code"
+set -x TERMINFO /usr/share/terminfo
 
 set -x PATH $PATH "$HOME/bin"
 
@@ -15,13 +16,15 @@ set -x CLOUDSDK_PYTHON "/usr/bin/python2.7"
 #set -x GOOGLE_APPLICATION_CREDENTIALS $HOME/application_default_credentials.json
 #set -x PATH $GOOGLE_APPLICATION_CREDENTIALS $PATH
 
-set -x GOROOT $GOROOT ""
-#set -x GOROOT $GOROOT /usr/local/go/bin/go/
+alias git 'env LANG=en_GB git'
 
+set -x GOPATH ""
 set -x GOPATH $GOPATH "$HOME/go"
 
-set -g CONDA_ROOT "$HOME/anaconda3"
-set -x PATH "$CONDA_ROOT/bin" $PATH
+set -x PYTHONPATH ""
+
+set -g CONDA_ROOT "$HOME/bin/miniconda3"
+set -x PATH "$CONDA_ROOT/bin" $PATH 
 
 source "$CONDA_ROOT/etc/fish/conf.d/conda.fish"
 
