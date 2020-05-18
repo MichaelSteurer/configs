@@ -1,0 +1,47 @@
+{
+    "title": "Bear",
+    "rules": [
+        {
+            "description": "[Bear] Control+V to Cursor PageUp and PageDown",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {"key_code": "v", "modifiers": {"mandatory": ["control"]}},
+                    "to": [{"key_code": "page_down", "modifiers": ["left_shift", "fn", "left_alt"]}],
+                    "conditions": [
+                        {"type": "frontmost_application_if", "bundle_identifiers": ["^net.shinyfrog.bear$"]},
+                        {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
+                        {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
+                    ]
+                }, {
+                    "type": "basic",
+                    "from": {"key_code": "v", "modifiers": {"mandatory": ["control"]}},
+                    "to": [{"key_code": "page_down", "modifiers": ["fn", "left_alt"]}],
+                    "conditions": [
+                        {"type": "frontmost_application_if", "bundle_identifiers": ["^net.shinyfrog.bear$"]},
+                        {"type": "variable_if", "name": "emacs_mode_cx", "value": 0}
+                    ]
+                }, 
+                
+                {
+                    "type": "basic",
+                    "from": {"key_code": "v", "modifiers": {"mandatory": ["option"]}},
+                    "to": [{"key_code": "page_up", "modifiers": ["left_shift", "fn", "left_alt"]}],
+                    "conditions": [
+                        {"type": "frontmost_application_if", "bundle_identifiers": ["^net.shinyfrog.bear$"]},
+                        {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
+                        {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
+                    ]
+                }, {
+                    "type": "basic",
+                    "from": {"key_code": "v", "modifiers": {"mandatory": ["option"]}},
+                    "to": [{"key_code": "page_up", "modifiers": ["fn", "left_alt"]}],
+                    "conditions": [
+                        {"type": "frontmost_application_if", "bundle_identifiers": ["^net.shinyfrog.bear$"]},
+                        {"type": "variable_if", "name": "emacs_mode_cx", "value": 0}
+                    ]
+                }
+            ]
+        }
+    ]
+}
