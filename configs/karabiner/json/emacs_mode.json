@@ -161,15 +161,15 @@
             "description": "[Emacs Mode] Control+V to PageDown and PageUp",
             "manipulators": [
                 {
-                    // "type": "basic",
-                    // "from": {"key_code": "v", "modifiers": {"mandatory": ["control"]}},
-                    // "to": [{"key_code": "page_down", "modifiers": ["left_shift"]}],
-                    // "conditions": [
-                    //     {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.googlecode.iterm2$", "^net.shinyfrog.bear$"]},
-                    //     {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
-                    //     {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
-                    // ]
-                // }, {
+                    "type": "basic",
+                    "from": {"key_code": "v", "modifiers": {"mandatory": ["control"]}},
+                    "to": [{"key_code": "page_down", "modifiers": ["left_shift"]}],
+                    "conditions": [
+                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.googlecode.iterm2$", "^net.shinyfrog.bear$"]},
+                        {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
+                        {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
+                    ]
+                }, {
                     "type": "basic",
                     "from": {"key_code": "v", "modifiers": {"mandatory": ["control"]}},
                     "to": [{"key_code": "page_down"}],
@@ -177,15 +177,15 @@
                         {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.googlecode.iterm2$", "^net.shinyfrog.bear$"]},
                         {"type": "variable_if", "name": "emacs_mode_cx", "value": 0}
                     ]
-                // }, {
-                //     "type": "basic",
-                //     "from": {"key_code": "v", "modifiers": {"mandatory": ["option"]}},
-                //     "to": [{"key_code": "page_up", "modifiers": ["left_shift"]}],
-                //     "conditions": [
-                //         {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.googlecode.iterm2$", "^net.shinyfrog.bear$"]},
-                //         {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
-                //         {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
-                //     ]
+                }, {
+                    "type": "basic",
+                    "from": {"key_code": "v", "modifiers": {"mandatory": ["option"]}},
+                    "to": [{"key_code": "page_up", "modifiers": ["left_shift"]}],
+                    "conditions": [
+                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.googlecode.iterm2$", "^net.shinyfrog.bear$"]},
+                        {"type": "variable_if", "name": "emacs_mode_cx", "value": 0},
+                        {"type": "variable_if", "name": "emacs_mode_markset", "value": 1}
+                    ]
                 }, {
                     "type": "basic",
                     "from": {"key_code": "v", "modifiers": {"mandatory": ["option"]}},
