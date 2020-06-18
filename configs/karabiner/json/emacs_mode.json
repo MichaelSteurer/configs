@@ -305,24 +305,7 @@
                     ]
                 }
             ]
-        }, {
-            "description": "[Emacs Mode] Control+K to Command+Shift+Right,Command+X",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {"key_code": "k", "modifiers": {"mandatory": ["control"]}},
-                    "to": [
-                        {"key_code": "right_arrow", "modifiers": ["left_command", "left_shift"]}, 
-                        {"key_code": "x", "modifiers": ["left_command"]}
-                    ],
-                    "to_after_key_up": [{"set_variable": {"name": "emacs_mode_markset", "value": 0}}],
-                    "conditions": [
-                        {"type": "frontmost_application_unless", "bundle_identifiers": ["^com.googlecode.iterm2$"]},
-                        {"type": "variable_if", "name": "emacs_mode_cx", "value": 0}
-                    ]
-                }
-            ]
-        },
+        }, 
         {
             "description": "[Emacs Mode] Control+M to Return",
             "manipulators": [
