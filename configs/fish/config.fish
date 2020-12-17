@@ -7,6 +7,8 @@ alias tree 'tree -Csuh'
 set -x EDITOR "code"
 set -x TERMINFO /usr/share/terminfo
 
+set -x HOSTNAME (hostname)
+
 set -x PATH $PATH "$HOME/bin"
 
 set -x GOOGLE_CLOUD_SDK $HOME/bin/google-cloud-sdk
@@ -46,31 +48,8 @@ if [ -f '$GOOGLE_CLOUD_SDK/completion.bash.inc' ]
     end
 end
 
-set -u fish_color_autosuggestion 006363
-set -u fish_color_cancel -r
-set -u fish_color_command 009999
-set -u fish_color_comment FF9640
-set -u fish_color_cwd green
-set -u fish_color_cwd_root red
-set -u fish_color_end FFB273
-set -u fish_color_error FF7400
-set -u fish_color_escape 'bryellow'  '--bold'
-set -u fish_color_history_current --bold
-set -u fish_color_host normal
-set -u fish_color_match --background=brblue
-set -u fish_color_normal normal
-set -u fish_color_operator bryellow
-set -u fish_color_param 33CCCC
-set -u fish_color_quote 5CCCCC
-set -u fish_color_redirection BF7130
-set -u fish_color_search_match 'bryellow'  '--background=brblack'
-set -u fish_color_selection 'white'  '--bold'  '--background=brblack'
-set -u fish_color_status red
-set -u fish_color_user brgreen
-set -u fish_color_valid_path --underline
-set -u fish_greeting 'Welcome to fish, the friendly interactive shell'
-set -u fish_key_bindings fish_default_key_bindings
-set -u fish_pager_color_completion
-set -u fish_pager_color_description 'B3A06D'  'yellow'
-set -u fish_pager_color_prefix 'white'  '--bold'  '--underline'
-set -u fish_pager_color_progress 'brwhite'  '--background=cyan'
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /Users/msteurer/bin/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
